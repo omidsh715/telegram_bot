@@ -8,12 +8,12 @@ def req():
 
 price = req()
 
-bot = telebot.TeleBot("1638487677:AAGpT9eFEv90PE95NFDK3Wi4fQfNUi-eiac")
+bot = telebot.TeleBot("TOKEN")
 
 
 @bot.message_handler(commands=['start',])
 def send_welcome(message):
-	bot.reply_to(message, "یه فرصت دوباره الهی شکرت")
+	bot.reply_to(message, "MESSAGE ONE")
 
 @bot.message_handler(commands=["bitcoin"])
 def bitcoin_price(message):
@@ -33,10 +33,10 @@ def echo_all(message):
 
 @bot.message_handler(content_types=["new_chat_photo"])
 def welcome(message):
-	bot.reply_to(message,"یودادا")
+	bot.reply_to(message,"MESSAGE TWO")
 
 
-@bot.message_handler(func=lambda message: "فیلم" )
+@bot.message_handler(func=lambda message: "MESSAGE TWO" )
 def echo_aز(message):
 	bot.reply_to(message,f' \n  از دستورات  \n'
 						 f'/ \n'
